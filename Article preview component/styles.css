@@ -1,0 +1,385 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+:root{
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+    --white: #fff;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: var(--Light-Grayish-Blue);
+    position: relative;
+}
+
+.container{
+    width: 325px;
+    height: 510px;
+    background: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.container .image{
+    width: 100%;
+    height: 195px;
+    overflow: hidden;
+    background: url(images/drawers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center 25%;
+    border-radius: 10px 10px 0 0;
+}
+
+.text-div{
+    padding: 35px 35px 10px 32px;
+}
+
+.text-div .text .bold{
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--Very-Dark-Grayish-Blue);
+    margin-bottom: 14px;
+    letter-spacing: 0.2px;
+    line-height: 24px;
+}
+
+.text-div .text .normal{
+    font-size:13px;
+    font-weight: 500;
+    color: var(--Desaturated-Dark-Blue);
+    text-align: left;
+    margin-bottom: 32px;
+    line-height: 20px;
+    /* word-spacing: 1.3px; */
+}
+
+.text-div .profile-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-div .profile-box .left{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.text-div .profile-box .left .profile-pic{
+    width: 40px;
+    height: 40px;
+    background: url(images/avatar-michelle.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center 25%;
+    border-radius: 50%;
+}
+
+.profile-box .profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.profile-box .profile .name{
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--Very-Dark-Grayish-Blue);
+    line-height: 20px;
+}
+
+.profile-box .profile .date{
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--Grayish-Blue);
+    line-height: 18px;
+}
+
+.active-share-desktop{
+    display: none;
+}
+
+.share-desktop{
+    display: none;
+}
+
+.profile-box .share{
+    width: 30px;
+    height: 30px;
+    background-color: var(--Light-Grayish-Blue);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.social-desktop{
+    display: none;
+}
+
+.active-share-desktop.active{
+    display: none;
+}
+
+.social{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    padding: 17px 35px;
+    background: var(--Very-Dark-Grayish-Blue);
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s ease-in;
+    display: none;
+}
+
+.social.active{
+    display: flex;
+}
+
+.social .social-left{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 66.8%;
+}
+
+.social .social-left span{
+    text-transform: uppercase;
+    color: var(--Grayish-Blue);
+    font-size: 13px;
+    letter-spacing: 4.5px;
+}
+
+.social .share.show{
+    width: 30px;
+    height: 30px;
+    background-color: var(--Desaturated-Dark-Blue);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+blockquote{
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+}
+
+blockquote a{
+    color: var(--Grayish-Blue);
+    text-decoration: none;
+}
+
+blockquote a:hover{
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+
+
+@media screen and (min-width:1024px) {
+
+    .container{
+        width: 730px;
+        height: 280px;
+        background: var(--white);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        display: flex;
+        box-shadow: 0 30px 75px -30px var(--Grayish-Blue);
+    }
+
+    .container .image{
+        width: 775px;
+        height: 100%;
+        overflow: hidden;
+        background: url(images/drawers.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:left left;
+        border-radius: 10px 0 0 10px;
+    }
+    
+    .text-div{
+        padding: 33px 35px 10px 40px;
+    }
+
+    .text-div .text .bold{
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--Very-Dark-Grayish-Blue);
+        margin-bottom: 10px;
+        line-height: 28px;
+    }
+    
+    .text-div .text .normal{
+        font-size:13px;
+        font-weight: 500;
+        color: var(--Desaturated-Dark-Blue);
+        text-align: left;
+        margin-bottom: 20px;
+        line-height: 20px;
+    }
+
+    .text-div .profile-box{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .text-div .profile-box .left{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 18px;
+    }
+    
+    .text-div .profile-box .left .profile-pic{
+        width: 40px;
+        height: 40px;
+        background: url(images/avatar-michelle.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center 25%;
+        border-radius: 50%;
+    }
+    
+    .profile-box .profile{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .profile-box .profile .name{
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--Very-Dark-Grayish-Blue);
+        line-height: 20px;
+    }
+    
+    .profile-box .profile .date{
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--Grayish-Blue);
+        line-height: 18px;
+    }
+    
+    .profile-box .share-desktop{
+        width: 35px;
+        height: 35px;
+        background-color: var(--Light-Grayish-Blue);
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+    .profile-box .share{
+        display: none;
+    }
+
+    .social{
+        display: none;
+    }
+
+    .social.active{
+        display: none;
+    }
+    
+    .container .social-desktop{
+        position: absolute;
+        top: 46.3%;
+        right: -70px;
+        width: 250px;
+        padding: 17px 35px;
+        background: var(--Very-Dark-Grayish-Blue);
+        border-radius:10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: 0.3s ease-in; 
+        display: none;  
+    }
+
+    .social-desktop::after{
+        content: " ";
+        position: absolute;
+        bottom: -23px;
+        left: 45%;
+        height: 0;
+        width: 0;
+        border-top: 13px solid var(--Very-Dark-Grayish-Blue);
+        border-bottom: 13px solid transparent;
+        border-left: 13px solid transparent;
+        border-right: 13px solid transparent;
+    }
+
+    .social-desktop.active{
+        display: flex;
+    }
+    
+    .social-desktop .social-left{
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 100%;
+    }
+    
+    .social-desktop .social-left span{
+        text-transform: uppercase;
+        color: var(--Grayish-Blue);
+        font-size: 13px;
+        letter-spacing: 4.5px;
+    }
+
+    .social-desktop img{
+        cursor: pointer;
+    }
+
+    .active-share-desktop{
+        display: none;
+    }
+
+    .active-share-desktop.active{
+        position: absolute;
+        bottom: 37px;
+        right: 37px;
+        width: 32px;
+        height: 32px;
+        background-color: var(--Desaturated-Dark-Blue);
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+    blockquote{
+        font-size: 14px;
+    }
+    
+}
